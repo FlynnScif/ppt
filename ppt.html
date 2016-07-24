@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>fullpage简单例子 </title>
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquery-fullPage/2.7.4/jquery.fullPage.css">
+<style>
+body{color:#fff;
+}
+
+.slide{text-align:center;
+}
+	
+</style>
+</head>
+
+
+<body>
+
+<!--页面结构-->
+<div id="fullpage">
+	<div class="section ">一些内容</div>
+	<!--给section（页）增加slide（幻灯片）-->
+	<div class="section ">
+		<div class="slide">111</div>
+		<div class="slide">222</div>
+		<div class="slide">333</div>
+	</div>
+	<div class="section ">一些内容</div>
+	<div class="section ">一些内容</div>
+</div>
+
+
+<!--引用js-->
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery-fullPage/2.7.4/jquery.fullPage.js"></script>
+
+<!--激活pullpage效果，选择最外层的fullpage容器，并调用一些方法-->
+<script>
+$(document).ready(function(){
+	$('#fullpage').fullpage({
+		sectionsColor:['green','orange','gray','red'],
+
+
+		afterLoad:function(link,index){
+			switch(index){
+					case 1:
+					break;
+					case 2:
+					break;
+					case 3:
+					break;
+					case 4:
+					break;
+					default:
+					break;
+			}
+		onLeave:function(link,index){
+			switch(index){
+					case 1:
+					break;
+					case 2:
+					break;
+					case 3:
+					break;
+					case 4:
+					break;
+					default:
+					break;
+			}
+		afterLoad:function(link,index){
+			switch(index){
+					case 1:
+					move('.section1 h1').scale(1.5).end();
+					break;
+					case 2:
+					break;
+					case 3:
+					break;
+					case 4:
+					break;
+					default:
+					break;
+			}
+
+		}
+
+	});
+})
+</script>
+</body>
+
+
+
+
+
+</html>
